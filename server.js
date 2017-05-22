@@ -10,7 +10,7 @@ app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(req, res) {
     // res.render('index');
-    let req_full = util.inspect(req.body);
+    let req_full = util.inspect(req);
     let req_str = JSON.stringify(req_full);
     res.send(req_full);
     console.log(req_full);
